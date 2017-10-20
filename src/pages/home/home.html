@@ -1,14 +1,40 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      AMEX Apply
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+
+	<div id="cardContainer">
+	  <ion-card>
+		  <ion-card-header>
+		    Step 1:
+		  </ion-card-header>
+		  <ion-card-content class="cardDescription">
+		    Please scan a valid form of ID.
+		  </ion-card-content>
+		    <button ion-fab class="cardButton">
+		      <ion-icon name="md-person-add"></ion-icon>
+		    </button>
+		</ion-card>
+	</div>
+	<br>
+	<div id="cardContainer">
+	  <ion-card >
+		  <ion-card-header>
+		    Step 2:
+		  </ion-card-header>
+		  <ion-card-content class="cardDescription">
+		    Take a picture of your face to verify your identity.
+		  </ion-card-content>
+		    <button ion-fab class="cardButton">
+		      <ion-icon name="md-camera"></ion-icon>
+		    </button>
+		</ion-card>		
+	</div>
+
+
 </ion-content>
