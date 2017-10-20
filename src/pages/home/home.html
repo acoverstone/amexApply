@@ -16,12 +16,14 @@
 		  <ion-card-content class="cardDescription">
 		    Please scan a valid form of ID.
 		  </ion-card-content>
-		    <button ion-fab class="cardButton">
-		      <ion-icon name="md-person-add"></ion-icon>
-		    </button>
+	    <button ion-fab class="cardButton">
+	      <ion-icon name="md-person-add"></ion-icon>
+	    </button>
 		</ion-card>
 	</div>
+	
 	<br>
+
 	<div id="cardContainer">
 	  <ion-card >
 		  <ion-card-header>
@@ -30,11 +32,48 @@
 		  <ion-card-content class="cardDescription">
 		    Take a picture of your face to verify your identity.
 		  </ion-card-content>
-		    <button ion-fab class="cardButton">
-		      <ion-icon name="md-camera"></ion-icon>
-		    </button>
+	    <button ion-fab class="cardButton">
+	      <ion-icon name="md-camera"></ion-icon>
+	    </button>
 		</ion-card>		
 	</div>
+	
+	<br>
+	
+	<div id="cardContainer">
+		<ion-card>
+		<ion-card-header>
+		    Step 3:
+		  </ion-card-header>
+		  <ion-card-content class="cardDescription">
+		    Choose what you would like to apply for.
+		  </ion-card-content>
+	    <button ion-fab class="cardButton">
+	      <ion-icon name="md-list"></ion-icon>
+	    </button>
+		</ion-card>
+	</div>
+	
+	<br>
 
+	<div id="cardContainer">
+		<ion-card>
+		<ion-card-header>
+		    Step 4:
+		  </ion-card-header>
+		  <ion-card-content>
+		    <ion-item>
+    			<ion-input type="text" placeholder="Add any additional comments." class="commentsBox"></ion-input>
+  			</ion-item>
+		  </ion-card-content>
+		    <button ion-fab class="cardButton">
+		      <ion-icon name="md-mic" style="font-size:180%!important;"></ion-icon>
+		    </button>
+		</ion-card>
+	</div>
+
+	<div padding>
+    <button ion-button block id="submitButton">Submit</button>
+  </div>
 
 </ion-content>
