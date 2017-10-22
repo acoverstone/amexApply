@@ -16,8 +16,11 @@
 		  <ion-card-content class="cardDescription">
 		    Please scan a valid form of ID.
 		  </ion-card-content>
-	    <button ion-fab class="cardButton">
+	    <button ion-fab class="cardButton" (click)="scanID()"  *ngIf="!(idScanned)">
 	      <ion-icon name="md-person-add"></ion-icon>
+	    </button>
+	    <button ion-fab class="cardButton" (click)="scanID()" *ngIf="(idScanned)" color="secondary">
+	      <ion-icon name="md-checkmark"></ion-icon>
 	    </button>
 		</ion-card>
 	</div>
@@ -32,8 +35,11 @@
 		  <ion-card-content class="cardDescription">
 		    Take a picture of your face to verify your identity.
 		  </ion-card-content>
-	    <button ion-fab class="cardButton">
+	    <button ion-fab class="cardButton" (click)="scanFace()" *ngIf="!(faceVerified)">
 	      <ion-icon name="md-camera"></ion-icon>
+	    </button>
+	    <button ion-fab class="cardButton" (click)="scanFace()" *ngIf="(faceVerified)" color="secondary">
+	      <ion-icon name="md-checkmark"></ion-icon>
 	    </button>
 		</ion-card>		
 	</div>
@@ -48,8 +54,11 @@
 		  <ion-card-content class="cardDescription">
 		    Choose what you would like to apply for.
 		  </ion-card-content>
-	    <button ion-fab class="cardButton">
+	    <button ion-fab class="cardButton" (click)="presentPopover($event)"  *ngIf="(appType) == null">
 	      <ion-icon name="md-list"></ion-icon>
+	    </button>
+	    <button ion-fab class="cardButton" (click)="presentPopover($event)" *ngIf="(appType) != null" color="secondary">
+	      <ion-icon name="md-checkmark"></ion-icon>
 	    </button>
 		</ion-card>
 	</div>
@@ -59,11 +68,11 @@
 	<div id="cardContainer">
 		<ion-card>
 		<ion-card-header>
-		    Step 4:
+		    Step 4: (Optional)
 		  </ion-card-header>
 		  <ion-card-content>
 		    <ion-item>
-    			<ion-input type="text" placeholder="Add any additional comments." class="commentsBox"></ion-input>
+    			<ion-input class="item-input" type="text" placeholder="Add any additional comments." class="commentsBox"></ion-input>
   			</ion-item>
 		  </ion-card-content>
 		    <button ion-fab class="cardButton">
@@ -73,7 +82,8 @@
 	</div>
 
 	<div padding>
-    <button ion-button block id="submitButton">Submit</button>
+    <button ion-button block id="submitButton" (click)="submitApp()">Submit</button>
   </div>
+  <button class="checkApplication" ion-button clear>Or Check Existing Application</button>
 
 </ion-content>

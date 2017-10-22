@@ -5,9 +5,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { AngularFireModule} from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { Camera, CameraOptions } from '@ionic-native/camera';
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
+import { HomePage, PopoverPage } from '../pages/home/home';
 
 var config = {
     apiKey: "AIzaSyD1A99KFinXU4emmchL1fcg_om4l-6wjlU",
@@ -21,7 +22,8 @@ var config = {
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    PopoverPage
   ],
   imports: [
     BrowserModule,
@@ -32,11 +34,13 @@ var config = {
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    PopoverPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    Camera,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
