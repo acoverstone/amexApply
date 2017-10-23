@@ -6,9 +6,15 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { AngularFireModule} from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { Camera, CameraOptions } from '@ionic-native/camera';
+import { SpeechRecognition } from '@ionic-native/speech-recognition';
+import { SocialSharing } from '@ionic-native/social-sharing';
 
 import { MyApp } from './app.component';
 import { HomePage, PopoverPage } from '../pages/home/home';
+import { CreditCardPage } from '../pages/credit-card/credit-card'
+import { HouseLoanPage } from '../pages/house-loan/house-loan'
+import { StudentLoanPage } from '../pages/student-loan/student-loan'
+import { CarLoanPage } from '../pages/car-loan/car-loan'
 
 var config = {
     apiKey: "AIzaSyD1A99KFinXU4emmchL1fcg_om4l-6wjlU",
@@ -23,6 +29,10 @@ var config = {
   declarations: [
     MyApp,
     HomePage,
+    CreditCardPage,
+    HouseLoanPage,
+    StudentLoanPage,
+    CarLoanPage,
     PopoverPage
   ],
   imports: [
@@ -35,12 +45,18 @@ var config = {
   entryComponents: [
     MyApp,
     HomePage,
-    PopoverPage
+    CreditCardPage,
+    PopoverPage,
+    HouseLoanPage,
+    StudentLoanPage,
+    CarLoanPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     Camera,
+    SpeechRecognition,
+    SocialSharing,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

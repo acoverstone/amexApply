@@ -29,9 +29,18 @@ page-home {
 
 	.checkApplication {
 		position: absolute;
-  		left: 50%;
-		margin-top: -10px !important;
+  		left: 42%;
+		margin-top: -14px !important;
   		font-size: 95% !important;
+	}
+
+	.document {
+		margin-left: 5%;
+		font-weight: bold;
+	}
+
+	.closeDoc {
+		margin-top: -6px!important;
 	}
 
 }

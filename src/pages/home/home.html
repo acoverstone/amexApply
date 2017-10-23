@@ -70,12 +70,49 @@
 		<ion-card-header>
 		    Step 4: (Optional)
 		  </ion-card-header>
+		  <ion-card-content class="cardDescription">
+    			<p>Please attach any necessary supporting documents.</p> 
+    			<p *ngIf="(numberDocs) >= 1" class="document" >Document1 <button ion-button clear color="danger" (click)="removeDocument()" class="closeDoc"><ion-icon name="md-close" ></ion-icon></button></p>
+    			<p *ngIf="(numberDocs) >= 2" class="document">Document2 <button ion-button clear color="danger" (click)="removeDocument()" class="closeDoc"><ion-icon name="md-close" ></ion-icon></button></p>
+    			<p *ngIf="(numberDocs) >= 3" class="document">Document3 <button ion-button clear color="danger" (click)="removeDocument()" class="closeDoc"><ion-icon name="md-close" ></ion-icon></button></p>
+		  </ion-card-content>
+		    <button ion-fab class="cardButton" (click)="addDocument()">
+		      <ion-icon name="md-document" style="font-size:180%!important;"></ion-icon>
+		    </button>
+		</ion-card>
+	</div>
+
+	<br>
+
+	<div id="cardContainer">
+		<ion-card>
+		<ion-card-header>
+		    Step 5: (Optional)
+		  </ion-card-header>
 		  <ion-card-content>
 		    <ion-item>
-    			<ion-input class="item-input" type="text" placeholder="Add any additional comments." class="commentsBox"></ion-input>
+    			<ion-input class="item-input" type="text" placeholder="Add the email of an existing cardmember as a reference." class="commentsBox"></ion-input>
   			</ion-item>
 		  </ion-card-content>
-		    <button ion-fab class="cardButton">
+		    <button ion-fab class="cardButton" (click)="shareToReference()">
+		      <ion-icon name="md-share" style="font-size:180%!important;"></ion-icon>
+		    </button>
+		</ion-card>
+	</div>
+
+	<br>
+
+	<div id="cardContainer">
+		<ion-card>
+		<ion-card-header>
+		    Step 6: (Optional)
+		  </ion-card-header>
+		  <ion-card-content>
+		    <ion-item>
+    			<ion-input class="item-input" type="text" placeholder="Add any additional comments." class="commentsBox" [(ngModel)]="comments"></ion-input>
+  			</ion-item>
+		  </ion-card-content>
+		    <button ion-fab class="cardButton" (click)="getSpeech()">
 		      <ion-icon name="md-mic" style="font-size:180%!important;"></ion-icon>
 		    </button>
 		</ion-card>
@@ -84,6 +121,6 @@
 	<div padding>
     <button ion-button block id="submitButton" (click)="submitApp()">Submit</button>
   </div>
-  <button class="checkApplication" ion-button clear>Or Check Existing Application</button>
+  <a href="https://itunes.apple.com/us/app/amex-mobile/id362348516?mt=8"><button class="checkApplication" ion-button clear>Or Check Existing Application</button></a>
 
 </ion-content>
