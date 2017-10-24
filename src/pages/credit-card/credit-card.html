@@ -13,23 +13,118 @@
 </ion-header>
 
 <ion-content padding>
-	<div id="cardContainer">
+	<div id="cardContainer" >
 		<ion-card>
 			<ion-card-header>
-		   	Application
+		   	Identification
 			</ion-card-header>
 		  <ion-card-content>
-				<ion-list>
+				<ion-list no-lines>
 
 			  <ion-item>
 			    <ion-label fixed>First Name</ion-label>
-			    <ion-input type="text" value=""></ion-input>
+			    <ion-input type="text" value="" [(ngModel)]="firstName"></ion-input>
 			  </ion-item>
 
 			  <ion-item>
 			    <ion-label fixed>Last Name</ion-label>
-			    <ion-input type="text" value=""></ion-input>
+			    <ion-input type="text" value="" [(ngModel)]="lastName"></ion-input>
 			  </ion-item>
+
+			  <ion-item>
+				  <ion-label>Date Of Birth</ion-label>
+				  <ion-datetime displayFormat="MMMM DD YYYY" min="1900"  [(ngModel)]="dob">
+				  </ion-datetime>
+			  </ion-item>
+
+			  <ion-item>
+			    <ion-label fixed>SSN</ion-label>
+			    <ion-input type="text" value="" [(ngModel)]="ssn"></ion-input>
+			  </ion-item>
+
+			</ion-list>
+		 	</ion-card-content>
+		</ion-card>
+	</div>
+	
+	<br>
+
+	<div id="cardContainer" >
+		<ion-card>
+			<ion-card-header>
+		   	Contact Information
+			</ion-card-header>
+		  <ion-card-content>
+				<ion-list no-lines>
+
+			  <ion-item>
+			    <ion-label fixed>Address</ion-label>
+			    <ion-input type="text" value="" [(ngModel)]="addressLine"></ion-input>
+			  </ion-item>
+
+			  <ion-item>
+				  <ion-label fixed>City</ion-label>
+			    <ion-input type="text" value="" [(ngModel)]="city"></ion-input>
+			  </ion-item>
+
+			  <ion-item>
+			    <ion-label fixed>State</ion-label>
+			    <ion-input type="text" value="" [(ngModel)]="state"></ion-input>
+			  </ion-item>
+
+			  <ion-item>
+			    <ion-label fixed>Zip Code</ion-label>
+			    <ion-input type="text" value="" [(ngModel)]="zip"></ion-input>
+			  </ion-item>
+
+			  <ion-item>
+			    <ion-label fixed>Phone</ion-label>
+			    <ion-input type="phone" value="" [(ngModel)]="phone"></ion-input>
+			  </ion-item>
+
+			  <ion-item>
+			    <ion-label fixed>Email</ion-label>
+			    <ion-input type="email" value="" [(ngModel)]="email"></ion-input>
+			  </ion-item>
+
+			</ion-list>
+		 	</ion-card-content>
+		</ion-card>
+	</div>
+
+	<br>
+
+	<div id="cardContainer" >
+		<ion-card>
+			<ion-card-header>
+		   	Card Information
+			</ion-card-header>
+		  <ion-card-content>
+				<ion-list no-lines>
+
+			  <ion-item>
+			    <ion-label fixed>Referred By</ion-label>
+			    <ion-input type="text" value="" [(ngModel)]="reference"></ion-input>
+			  </ion-item>
+
+			  <ion-item>
+			    <ion-label>
+          Card Type
+        </ion-label>
+        <ion-select [(ngModel)]="cardType">
+          <ion-option value="Premier Rewards Gold Card">Premier Rewards Gold Card</ion-option>
+          <ion-option value="Blue Cash Everyday Card">Blue Cash Everyday Card</ion-option>
+          <ion-option value="Green Card">Green Card</ion-option>
+          <ion-option value="Platinum Card">Platinum Card</ion-option>
+          <ion-option value="Everyday Preferred Card">Everyday Preferred Card</ion-option>
+        </ion-select>
+			  </ion-item>
+
+			  <ion-item class="note" text-wrap>
+				  <ion-note item-end>
+	      		Recommended for you: Blue Cash Everyday Card
+	    		</ion-note>
+    		</ion-item>
 
 			</ion-list>
 		 	</ion-card-content>

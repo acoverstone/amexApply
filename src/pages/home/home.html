@@ -71,7 +71,7 @@
 		    Step 4: (Optional)
 		  </ion-card-header>
 		  <ion-card-content class="cardDescription">
-    			<p>Please attach any necessary supporting documents.</p> 
+    			Please attach any necessary supporting documents.
     			<p *ngIf="(numberDocs) >= 1" class="document" >Document1 <button ion-button clear color="danger" (click)="removeDocument()" class="closeDoc"><ion-icon name="md-close" ></ion-icon></button></p>
     			<p *ngIf="(numberDocs) >= 2" class="document">Document2 <button ion-button clear color="danger" (click)="removeDocument()" class="closeDoc"><ion-icon name="md-close" ></ion-icon></button></p>
     			<p *ngIf="(numberDocs) >= 3" class="document">Document3 <button ion-button clear color="danger" (click)="removeDocument()" class="closeDoc"><ion-icon name="md-close" ></ion-icon></button></p>
@@ -91,7 +91,7 @@
 		  </ion-card-header>
 		  <ion-card-content>
 		    <ion-item>
-    			<ion-input class="item-input" type="text" placeholder="Add the email of an existing cardmember as a reference." class="commentsBox"></ion-input>
+    			<ion-input class="item-input" type="text" placeholder="Add the email of an existing cardmember as a reference." class="commentsBox" [(ngModel)]="reference"></ion-input>
   			</ion-item>
 		  </ion-card-content>
 		    <button ion-fab class="cardButton" (click)="shareToReference()">

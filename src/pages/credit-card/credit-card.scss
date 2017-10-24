@@ -1,3 +1,49 @@
 page-credit-card {
+.md ion-list > .item:last-child, 
+.md ion-list > .item-wrapper:last-child .item,
+.wp ion-list > .item:last-child, 
+.wp ion-list > .item-wrapper:last-child .item,
+.ios ion-list > .item:last-child, 
+.ios ion-list > .item-wrapper:last-child .item {
+    border-bottom: none !important;
+}
+.list-ios>.item-block:first-child {
+    border-top: none !important;
+}
+.list-ios>.item-block:last-child {
+    border-bottom: none !important;
+}
+.item-md.item-block .item-inner,
+.item-md.item-input.input-has-focus .item-inner,
+.item-md.item-input.ng-valid.input-has-value:not(.input-has-focus) .item-inner,
+.item-md.item-input.ng-invalid.ng-touched:not(.input-has-focus) .item-inner,
+.list-md .item-input.input-has-focus:last-child,
+.list-md .item-input.ng-valid.input-has-value:not(.input-has-focus):last-child,
+.list-md .item-input.ng-invalid.ng-touched:not(.input-has-focus):last-child {
+    border-bottom: none;
+    box-shadow: none;
+}
+.list-md .item-input.input-has-focus:last-child .item-inner,
+.list-md .item-input.ng-valid.input-has-value:not(.input-has-focus):last-child .item-inner,
+.list-md .item-input.ng-invalid.ng-touched:not(.input-has-focus):last-child .item-inner {
+    box-shadow: none; 
+}
+.item-inner { border-bottom-color: transparent !important; box-shadow: none !important; } 
+
+
+
+ion-label {
+	font-size: 80% !important;
+}
+
+.note {
+	padding-top: 0px !important;
+	
+	margin-top: -3px !important;
+	margin-left: -2% !important;
+	text-align: right !important
+}
 
 }
+
+

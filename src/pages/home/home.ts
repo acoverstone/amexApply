@@ -8,6 +8,37 @@ import { HouseLoanPage } from '../../pages/house-loan/house-loan'
 import { StudentLoanPage } from '../../pages/student-loan/student-loan'
 import { CarLoanPage } from '../../pages/car-loan/car-loan'
 
+
+class ApplicantInfo {
+  firstName: string
+  lastName: string
+  dob: string
+  ssn: string
+  addressLine: string
+  city: string
+  state: string
+  zip: string
+  phone: string
+  email: string
+  reference: string
+
+  constructor(firstName: string, lastName: string, dob: string, ssn: string, addressLine: string, city: string, state: string, zip: string, phone: string, email: string, reference: string) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.dob = dob;
+    this.ssn = ssn;
+    this.addressLine = addressLine;
+    this.city = city;
+    this.state = state;
+    this.zip = zip;
+    this.phone = phone;
+    this.email = email;
+    this.reference = reference;
+  }
+}
+
+
+
 // Popup page to select application type
 @Component({
   template: `
@@ -64,11 +95,13 @@ export class HomePage {
 	faceVerified;
   comments;
   numberDocs;
+  reference;
 
   constructor(public navCtrl: NavController, public popoverCtrl: PopoverController, public camera: Camera, private alertCtrl: AlertController, private speechRecognition: SpeechRecognition, private socialSharing: SocialSharing) {
   	this.idScanned = false;
 		this.faceVerified = false;
     this.comments = '';
+    this.reference = '';
     this.numberDocs = 0;
   }
 
@@ -87,10 +120,13 @@ export class HomePage {
 
   // Submit application to verify your identify and bring you to next page
   submitApp() {
-    console.log(this.appType);
+    let Veera = new ApplicantInfo('Veerababu', 'Motamarri', '1990-04-25', '529-44-1379', '505 Sunrise Blvd', 'Sunrise', 'FL', '33323', '954-367-8812', 'veera.babu@aexp.com', this.reference, 'Premier Rewards Gold Card');
+    // Adam = new ApplicantInfo = ('Veerababu', 'Motamarri', 'April 17 1990', '529-44-1379', '505 Sunrise Blvd', 'Sunrise', 'FL', '33323', '954-367-8812', 'veera.babu@aexp.com', this.reference, 'Premier Rewards Gold Card');
     if(this.appType != null && this.idScanned && this.faceVerified) {
       if(this.appType == "Credit Card") {
-        this.navCtrl.push(CreditCardPage);
+        this.navCtrl.push(CreditCardPage, {
+          applicant: Veera
+        });
       }
       else if(this.appType == "Student Loan") {
         this.navCtrl.push(StudentLoanPage);
