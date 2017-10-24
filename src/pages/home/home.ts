@@ -135,7 +135,9 @@ export class HomePage {
         });
       }
       else if(this.appType == "House Loan") {
-        this.navCtrl.push(HouseLoanPage);
+        this.navCtrl.push(HouseLoanPage, {
+          applicant: Jared
+        });
       }
       else if(this.appType == "Car Loan") {
         this.navCtrl.push(CarLoanPage);
