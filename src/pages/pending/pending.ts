@@ -20,7 +20,7 @@ export class PendingPage {
 	loanAmount;
 	university;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, ) {
   	this.appType = this.navParams.get('appType');
   	this.email = this.navParams.get('email');
   	this.firstName = this.navParams.get('firstName');
@@ -32,6 +32,16 @@ export class PendingPage {
 		}
   }
 
+  fixCredit() {
+	let alert = this.alertCtrl.create({
+        title: 'Resolving Issue',
+        message: 'It appears your credit may not be sufficient for this loan. Attach a cosigner or supporting documents to resolve this issue.',
+        buttons: [{
+          'text': 'OK'
+          }]
+      });
+      alert.present();
+  }
 
 
 }

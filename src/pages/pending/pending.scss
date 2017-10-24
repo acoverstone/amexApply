@@ -2,4 +2,37 @@ page-pending {
 	ion-card-header {
 		font-weight: bold !important;
 	}
+
+	.cardPic {
+		width: 250px;
+		height: 250px;
+		position: absolute;
+  		left: 50%;
+  		margin-left: -125px;
+	}
+
+	.description {
+		color: #242424 !important;
+		margin-left: 10%;
+		margin-right: 10%;
+	}
+
+	.reason {
+		color: #242424 !important;
+		margin-left: 17%;
+		margin-right: 10%;
+		margin-bottom: 15px;
+	}
+
+	.closeDoc {
+		margin-top: -5px!important;
+		margin-left: 25px !important;
+	}
+
+	.checkApplication {
+		position: absolute;
+  		left: 40%;
+		margin-top: -8px !important;
+  		font-size: 105% !important;
+	}
 }

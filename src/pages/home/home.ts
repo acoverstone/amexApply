@@ -61,8 +61,8 @@ class ApplicantInfo {
         <ion-radio value="Car Loan"></ion-radio>
       </ion-item>
       <ion-item>
-        <ion-label>Commercial Lending</ion-label>
-        <ion-radio value="Commercial Lending"></ion-radio>
+        <ion-label>Commercial Loan</ion-label>
+        <ion-radio value="Commercial Loan"></ion-radio>
       </ion-item>
     </ion-list>
     <div padding>

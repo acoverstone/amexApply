@@ -11,14 +11,20 @@
   </ion-navbar>
 
 </ion-header>
+
+<ion-content padding>
 	<div>
 		<ion-card>
 			<ion-card-header text-center>
 		   	Pending Application
 			</ion-card-header>
-			<p text-center class="description" style="margin-top: 21vh !important; margin-bottom: 15px !important;">Your application for a student loan of the amount has been approved and an account has been added for your existing email {{email}}.</p>
+			<img src="http://swallowingsystemscore.org/wp-content/uploads/2015/11/UF-funding.png" class="cardPic">
+			<p class="description" style="margin-top: 250px !important; margin-bottom: 15px !important;">Your application for a student loan of the amount ${{loanAmount}} to the {{university}} is pending for the following reasons:</p>
+
+			<p class="reason">Low credit score alert <button ion-button clear color="danger" (click)="fixCredit()" class="closeDoc">FIX</button></p>
+
 		</ion-card>
 	</div>
-<ion-content padding>
 
+	<a href="https://itunes.apple.com/us/app/amex-mobile/id362348516?mt=8"><button class="checkApplication" ion-button clear>Check Existing Application</button></a>
 </ion-content>
