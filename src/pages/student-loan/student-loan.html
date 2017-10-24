@@ -86,5 +86,46 @@
 		</ion-card>
 	</div>
 
+	<div id="cardContainer" >
+		<ion-card>
+			<ion-card-header>
+		   	Student Information
+			</ion-card-header>
+		  <ion-card-content>
+				<ion-list no-lines>
+
+				  <ion-item>
+				    <ion-label fixed>University Name</ion-label>
+				    <ion-input type="text" value="" [(ngModel)]="university"></ion-input>
+				  </ion-item>
+
+				  <ion-item>
+				    <ion-label>
+		          Year Enrolled
+		        </ion-label>
+		        <ion-select [(ngModel)]="year">
+		          <ion-option value="Freshman">Freshman</ion-option>
+		          <ion-option value="Sophomore">Sophomore</ion-option>
+		          <ion-option value="Junior">Junior</ion-option>
+		          <ion-option value="Senior">Senior</ion-option>
+		          <ion-option value="Super Senior">Super Senior (5+)</ion-option>
+		        </ion-select>
+				  </ion-item>
+
+				  <ion-item>
+				    <ion-label fixed>GPA</ion-label>
+				    <ion-input type="text" value="" [(ngModel)]="gpa"></ion-input>
+				  </ion-item>
+				
+					<ion-item>
+				    <ion-label fixed>Loan Amount</ion-label>
+				    <ion-input type="text" value="" [(ngModel)]="loanAmount"></ion-input>
+				  </ion-item>
+
+				</ion-list>
+		 	</ion-card-content>
+		</ion-card>
+	</div>
+
 	
 </ion-content>
