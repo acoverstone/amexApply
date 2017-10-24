@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 
 
-
 @IonicPage()
 @Component({
   selector: 'page-credit-card',
@@ -51,8 +50,22 @@ export class CreditCardPage {
   }
 
   submitApp() {
-    if(this.firstName != '' && this.lastName != '' && this.dob != '' && this.ssn != '' && this.addressLine != '' && this.city != '' && this.state != '' && this.zip != '' && this.phone != '' && this.email != '' && this.firstName != '' && this.cardType != '') {
-      console.log('submitted');
+    if(this.firstName != '' && this.lastName != '' && this.dob != '' && this.ssn != '' && this.addressLine != '' && this.city != '' && this.state != '' && this.zip != '' && this.phone != '' && this.email != '' && this.cardType != '') {
+      this.navCtrl.push('AcceptedPage', {
+        appType: 'creditCard',
+        firstName: this.firstName,
+        email: this.email,
+        cardType: this.cardType
+      });
+    } else {
+      let alert = this.alertCtrl.create({
+        title: 'Error',
+        message: 'Please make sure all required fields are filled out before submitting this form.',
+        buttons: [{
+          'text': 'OK'
+          }]
+      });
+      alert.present();
     }
   }
 

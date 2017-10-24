@@ -15,6 +15,8 @@ import { CreditCardPage } from '../pages/credit-card/credit-card'
 import { HouseLoanPage } from '../pages/house-loan/house-loan'
 import { StudentLoanPage } from '../pages/student-loan/student-loan'
 import { CarLoanPage } from '../pages/car-loan/car-loan'
+import { AcceptedPage } from '../pages/accepted/accepted'
+import { PendingPage } from '../pages/pending/pending'
 
 var config = {
     apiKey: "AIzaSyD1A99KFinXU4emmchL1fcg_om4l-6wjlU",
