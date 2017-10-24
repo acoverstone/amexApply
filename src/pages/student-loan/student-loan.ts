@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 
 /**
  * Generated class for the StudentLoanPage page.
@@ -26,8 +26,10 @@ export class StudentLoanPage {
   phone: string
   email: string
   reference: string
+  university: string
+  loanAmount: string
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
   	let applicant = this.navParams.get('applicant');
 		this.firstName = applicant.firstName;
     this.lastName = applicant.lastName;
@@ -40,10 +42,40 @@ export class StudentLoanPage {
     this.phone = applicant.phone;
     this.email = applicant.email;
     this.reference = applicant.reference;
+    this.university = '';
+    this.loanAmount = '';
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad StudentLoanPage');
+     let alert = this.alertCtrl.create({
+        title: 'User Not Found',
+        message: 'Hi Jared! Your profile was not recognized by our system, please enter your additional information and submit to apply for a loan.',
+        buttons: [{
+          'text': 'OK'
+          }]
+      });
+      alert.present();
+  }
+
+  submitApp() {
+    if(this.firstName != '' && this.lastName != '' && this.dob != '' && this.ssn != '' && this.addressLine != '' && this.city != '' && this.state != '' && this.zip != '' && this.phone != '' && this.email != '' && this.loanAmount != '' && this.university != '') {
+      this.navCtrl.push('PendingPage', {
+        appType: 'studentLoan',
+        firstName: this.firstName,
+        email: this.email,
+        loanAmount: this.loanAmount,
+        university: this.university
+      });
+    } else {
+      let alert = this.alertCtrl.create({
+        title: 'Error',
+        message: 'Please make sure all required fields are filled out before submitting this form.',
+        buttons: [{
+          'text': 'OK'
+          }]
+      });
+      alert.present();
+    }
   }
 
 }

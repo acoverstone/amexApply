@@ -60,6 +60,10 @@ class ApplicantInfo {
         <ion-label>Car Loan</ion-label>
         <ion-radio value="Car Loan"></ion-radio>
       </ion-item>
+      <ion-item>
+        <ion-label>Commercial Lending</ion-label>
+        <ion-radio value="Commercial Lending"></ion-radio>
+      </ion-item>
     </ion-list>
     <div padding>
     	<button ion-button block id="submitButton" (click)="closePopover()" style="margin-top:-20px !important;">Confirm</button>
@@ -121,7 +125,7 @@ export class HomePage {
   // Submit application to verify your identify and bring you to next page
   submitApp() {
     let Veera = new ApplicantInfo('Veerababu', 'Motamarri', '1990-04-25', '529-44-1379', '505 Sunrise Blvd', 'Sunrise', 'FL', '33323', '954-367-8812', 'veera.babu@aexp.com', this.reference);
-    let Jared = new ApplicantInfo('Jared', 'Trinkler', 'January 20 1994', '689-12-9235', '505 Flamingo Blvd', 'Sunrise', 'FL', '33323', '321-727-4476', 'jared.trinkler@aexp.com', this.reference);
+    let Jared = new ApplicantInfo('Jared', 'Trinkler', 'January 20 1994', '', '505 Flamingo Blvd', 'Sunrise', 'FL', '33323', '', '', this.reference);
     
     if(this.appType != null && this.idScanned && this.faceVerified) {
       if(this.appType == "Credit Card") {
@@ -140,6 +144,9 @@ export class HomePage {
         });
       }
       else if(this.appType == "Car Loan") {
+        this.navCtrl.push(CarLoanPage);
+      }
+      else if(this.appType == "Commercial Loan") {
         this.navCtrl.push(CarLoanPage);
       }
     }
