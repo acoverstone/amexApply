@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 
 /**
  * Generated class for the PendingPage page.
@@ -20,7 +20,7 @@ export class PendingPage {
 	loanAmount;
 	university;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, ) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
   	this.appType = this.navParams.get('appType');
   	this.email = this.navParams.get('email');
   	this.firstName = this.navParams.get('firstName');
