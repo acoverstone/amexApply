@@ -120,7 +120,7 @@ export class HomePage {
 
   // Submit application to verify your identify and bring you to next page
   submitApp() {
-    let Veera = new ApplicantInfo('Veerababu', 'Motamarri', '1990-04-25', '529-44-1379', '505 Sunrise Blvd', 'Sunrise', 'FL', '33323', '954-367-8812', 'veera.babu@aexp.com', this.reference, 'Premier Rewards Gold Card');
+    let Veera = new ApplicantInfo('Veerababu', 'Motamarri', '1990-04-25', '529-44-1379', '505 Sunrise Blvd', 'Sunrise', 'FL', '33323', '954-367-8812', 'veera.babu@aexp.com', this.reference);
     // Adam = new ApplicantInfo = ('Veerababu', 'Motamarri', 'April 17 1990', '529-44-1379', '505 Sunrise Blvd', 'Sunrise', 'FL', '33323', '954-367-8812', 'veera.babu@aexp.com', this.reference, 'Premier Rewards Gold Card');
     if(this.appType != null && this.idScanned && this.faceVerified) {
       if(this.appType == "Credit Card") {
