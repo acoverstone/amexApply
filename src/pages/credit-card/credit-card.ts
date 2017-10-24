@@ -21,6 +21,7 @@ export class CreditCardPage {
   phone: string
   email: string
   reference: string
+  cardType: string
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
   	let applicant = this.navParams.get('applicant');
@@ -41,7 +42,7 @@ export class CreditCardPage {
   ionViewDidLoad() {
    	let alert = this.alertCtrl.create({
         title: 'Existing User',
-        message: 'Your profile was recognized by our system, please double check your information and submit to apply for a card.',
+        message: 'Hi Veera! Your profile was recognized by our system, please double check your information and submit to apply for a card.',
         buttons: [{
           'text': 'OK'
           }]
