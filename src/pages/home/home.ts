@@ -121,7 +121,8 @@ export class HomePage {
   // Submit application to verify your identify and bring you to next page
   submitApp() {
     let Veera = new ApplicantInfo('Veerababu', 'Motamarri', '1990-04-25', '529-44-1379', '505 Sunrise Blvd', 'Sunrise', 'FL', '33323', '954-367-8812', 'veera.babu@aexp.com', this.reference);
-    // Adam = new ApplicantInfo = ('Veerababu', 'Motamarri', 'April 17 1990', '529-44-1379', '505 Sunrise Blvd', 'Sunrise', 'FL', '33323', '954-367-8812', 'veera.babu@aexp.com', this.reference, 'Premier Rewards Gold Card');
+    let Jared = new ApplicantInfo('Jared', 'Trinkler', 'January 20 1994', '689-12-9235', '505 Flamingo Blvd', 'Sunrise', 'FL', '33323', '321-727-4476', 'jared.Trinkler@aexp.com', this.reference);
+    
     if(this.appType != null && this.idScanned && this.faceVerified) {
       if(this.appType == "Credit Card") {
         this.navCtrl.push(CreditCardPage, {
@@ -129,7 +130,9 @@ export class HomePage {
         });
       }
       else if(this.appType == "Student Loan") {
-        this.navCtrl.push(StudentLoanPage);
+        this.navCtrl.push(StudentLoanPage, {
+          applicant: Jared
+        });
       }
       else if(this.appType == "House Loan") {
         this.navCtrl.push(HouseLoanPage);
